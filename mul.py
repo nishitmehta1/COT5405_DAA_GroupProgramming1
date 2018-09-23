@@ -25,15 +25,6 @@ def random_generate(number_of_digits):
 		number_2_array.append(number_2)
 
 @profile
-def multiply(n, m):  # Recursive multiplication of two numbers
-	if m == 0:
-		return 0
-	elif m < 0:
-		return -(n - multiply(n, m+1))
-	else:
-		return n + multiply(n, m-1)
-
-@profile
 def bitWise(a, b): 
 	result = 0 
 
@@ -60,13 +51,14 @@ def bit():
 def my_main():
 	globals()['number_1_array'] = []
 	globals()['number_2_array'] = []
-	number_of_digits = int(input("number_of_digits = "))
+	# number_of_digits = int(input("number_of_digits = "))
+	number_of_digits = 512
 	random_generate(number_of_digits)
 	start = time.time()
 	bit()
 	# xxxx-----xxxxx
 	end = time.time()
-	print(end - start)
+	print("Time Taken : ", (end - start))
 
 
 # xxxx-----xxxxx
